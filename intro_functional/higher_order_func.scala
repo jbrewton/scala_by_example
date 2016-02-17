@@ -1,3 +1,4 @@
+// Higher Order Functions
 def sqr(x: Int) = x * x
 def cube(x: Int) = x * x * x
 
@@ -18,7 +19,7 @@ def identity(x: Int) = x
 def sum(f: Int=>Int, a: Int, b: Int): Int =
   if (a == b) f(a) else f(a) + sum(f, a + 1, b)
 
-
+println("Higher Order Functions")
 println(sum(identity, 1, 10))
 println("--")
 println(sumSquares(1, 10))
@@ -27,3 +28,10 @@ println("--")
 println(sumCubes(1, 10))
 println(sum(cube, 1, 10))
 println("--")
+
+
+// Anonymous functions
+println("Anonymous functions")
+println(sum(x=>x, 1, 10))
+println(sum(x=>x * x, 1, 10))
+println(sum(x=>x * x * x, 1, 10))
